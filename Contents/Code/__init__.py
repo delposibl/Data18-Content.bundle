@@ -419,7 +419,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': contentURL}).content,
                 sort_order=i)
             i += 1
-            Log('Poster Sequence Updated')
+            Log('Poster Sequence Updated >>>>>>>>>>>>>>>>>>>>   1')
         except:
             pass
 
@@ -451,7 +451,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': imageURL}).content,
                 sort_order=i)
             i += 1
-            Log('Poster - Photoset - Sequence Updated')
+            Log('Poster - Photoset - Sequence Updated >>>>>>>>>   2')
         except:
             pass
 
@@ -479,7 +479,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': contentURL}).content,
                 sort_order=i)
             i += 1
-            Log('Poster - Photoset - Sequence Updated')
+            Log('Poster - Photoset - Sequence Updated >>>>>>>>>   3')
         except:
             pass
 
@@ -487,12 +487,12 @@ class EXCAgent(Agent.Movies):
         try:
             posterimg = html.xpath(XPATHS['video-poster'])[0]
             posterUrl = posterimg.get('src').strip()
-            Log('Video Postetr Url: ' + posterUrl)
+            Log('Video Poster Url: ' + posterUrl)
             metadata.posters[posterUrl] = Proxy.Media(
                 HTTP.Request(posterUrl,
                              headers={'Referer': contentURL}).content,
                 sort_order=i)
-            Log('Video Poster Sequence Updated')
+            Log('Video Poster Sequence Updated >>>>>>>>>   4')
         except:
             pass
 
@@ -508,7 +508,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': contentURL}).content,
                 sort_order=i)
             i += 1
-            Log('Art Sequence Updated')
+            Log('Art Sequence Updated >>>>>>>>>   5')
         except:
             pass
         # Second try at "Play this Video" (Embedded html #document)
@@ -524,7 +524,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': imageURL}).content,
                 sort_order=i)
             i += 1
-            Log('Art -Embedded Video- Sequence Updated')
+            Log('Art -Embedded Video- Sequence Updated >>>>>>>>>   6')
         except:
             pass
 
@@ -554,7 +554,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': imageURL}).content,
                 sort_order=i)
             i += 1
-            Log('Art - Photoset - Sequence Updated')
+            Log('Art - Photoset - Sequence Updated >>>>>>>>>   7')
         except:
             pass
 
@@ -581,7 +581,7 @@ class EXCAgent(Agent.Movies):
                              headers={'Referer': contentURL}).content,
                 sort_order=i)
             i += 1
-            Log('Poster - Photoset - Sequence Updated')
+            Log('Poster - Photoset - Sequence Updated >>>>>>>>>   8')
         except:
             pass
 
@@ -663,7 +663,7 @@ class EXCAgent(Agent.Movies):
             pass
 
         # Content Rating
-        metadata.content_rating = 'NC-17'
+        metadata.content_rating = 'XXX'
 
         Log('Updated:')
         Log('    Title:...............' + metadata.title)
